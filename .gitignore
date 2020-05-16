@@ -1,0 +1,10 @@
+st
+st.o
+x.o
+*.orig
+*.rej
+*.def.h
+FAQ
+LEGACY
+README
+TODO
