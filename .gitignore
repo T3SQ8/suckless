@@ -3,8 +3,10 @@ st.o
 x.o
 *.orig
 *.rej
-*.def.h
+*.o
 FAQ
 LEGACY
 README
 TODO
+dmenu
+stest
