@@ -330,13 +330,6 @@ match(void)
 		matchend = substrend;
 	}
 	curr = sel = matches;
-
-	if(lstat && matches && matches==matchend && !lsubstr) {
-		puts(matches->text);
-		cleanup();
-		exit(0);
-	}
-
 	calcoffsets();
 }
 
@@ -772,7 +765,7 @@ setup(void)
 static void
 usage(void)
 {
-	fputs("usage: dmenu [-bfiv] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
+	fputs("usage: dmenu [-b] [-f] [-i] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
 	      "             [-nb color] [-nf color] [-sb color] [-sf color] [-w windowid]\n", stderr);
 	exit(1);
 }
