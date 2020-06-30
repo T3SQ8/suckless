@@ -6,7 +6,6 @@ x.o
 *.o
 FAQ
 LEGACY
-README
 TODO
 dmenu
 stest
