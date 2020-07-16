@@ -1,5 +1,5 @@
 Xresources patch
-scroll
+scroll patch
 Remapped ctrl + plus, ctrl + minus and ctrl + 0 to increase, decrease and reset font size
 increased border
 Disable printing 6c
