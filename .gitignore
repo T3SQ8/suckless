@@ -1,6 +1,4 @@
 st
-st.o
-x.o
 *.orig
 *.rej
 *.o
@@ -9,5 +7,5 @@ LEGACY
 TODO
 dmenu
 stest
-scroll/scroll
-config.def.h
+*.def.*
+scroll
