@@ -28,7 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	/* { "Gimp",     NULL,       NULL,       0,            1,           -1 }, */
-	/* { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 }, */
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -81,10 +81,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      togglefloating, {0} },                /* Make window float */
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },        /* Show all tags */
 	{ MODKEY,                       XK_p,      tag,            {.ui = ~0 } },        /* Pin window */
-	/* { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } }, */         /* Send to next screen */
-	/* { MODKEY,                       XK_period, focusmon,       {.i = +1 } }, */         /* Send to next screen */
-	/* { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } }, */         /* Send to next screen */
-	/* { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } }, */         /* Send to next screen */
+	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },         /* Send to next screen */
+	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },         /* Send to next screen */
+	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },         /* Send to next screen */
+	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },         /* Send to next screen */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
