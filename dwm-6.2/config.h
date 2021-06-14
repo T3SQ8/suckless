@@ -48,6 +48,7 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define ALTKEY Mod1Mask
+#define NOMODKEY NULL
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -123,6 +124,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Next,   shiftview,      { .i = +1 } },        /* Switch to next tag */
 	{ MODKEY,                       XK_Prior,  shiftview,      { .i = -1 } },        /* Switch to previous tag */
 	{ MODKEY|ALTKEY,                XK_q,      quit,           {0} },                /* Kill Dwm */
+	{ NOMODKEY,                     XF86XK_AudioLowerVolume,      spawn,           SHCMD("amixer sset Master 5%-") },
+	{ NOMODKEY,                     XF86XK_AudioRaiseVolume,      spawn,           SHCMD("amixer sset Master 5%+") },
+	{ NOMODKEY,                     XF86XK_AudioMute,             spawn,           SHCMD("amixer sset Master toggle") },
+	{ ControlMask,                  XK_space,                     spawn,           SHCMD("switchkbd") },
 };
 
 /* button definitions */
