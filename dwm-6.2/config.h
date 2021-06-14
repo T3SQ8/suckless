@@ -110,6 +110,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },         /* Increase gaps */
 	{ MODKEY,                       XK_plus,   setgaps,        {.i = +1 } },         /* Decrease gaps */
 	{ MODKEY|ShiftMask,             XK_0,      setgaps,        {.i = 0  } },         /* No gaps */
+	{ MODKEY|ShiftMask,             XK_p,      togglecanfocusfloating,   {0} },      /* Toggle focus for floating windows */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
