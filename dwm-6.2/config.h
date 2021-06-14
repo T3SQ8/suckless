@@ -80,7 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {0} },                /* Toggle last layout */
 	{ MODKEY,                       XK_s,      togglefloating, {0} },                /* Make window float */
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },        /* Show all tags */
-	{ MODKEY,                       XK_p,      tag,            {.ui = ~0 } },        /* Pin window */
+	{ MODKEY,                       XK_p,      togglesticky,   {0} },                /* Pin window */
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },         /* Send to next screen */
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },         /* Send to next screen */
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },         /* Send to next screen */
