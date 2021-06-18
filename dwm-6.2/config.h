@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -101,7 +101,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,             XK_s,      setlayout,      {.v = &layouts[2]} }, */ /* Set floating layout */
 	{ MODKEY,                       XK_f,      setlayout,      {0} },                /* Toggle last layout */
 	{ MODKEY,                       XK_s,      togglefloating, {0} },                /* Make window float */
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },        /* Show all tags */
+	/* { MODKEY,                       XK_0,      view,           {.ui = ~0 } }, */        /* Show all tags */
 	{ MODKEY,                       XK_p,      togglesticky,   {0} },                /* Pin window */
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },         /* Send to next screen */
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },         /* Send to next screen */
@@ -109,7 +109,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },         /* Send to next screen */
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },         /* Increase gaps */
 	{ MODKEY,                       XK_plus,   setgaps,        {.i = +1 } },         /* Decrease gaps */
-	{ MODKEY|ShiftMask,             XK_0,      setgaps,        {.i = 0  } },         /* No gaps */
+	/* { MODKEY|ShiftMask,             XK_0,      setgaps,        {.i = 0  } }, */         /* No gaps */
 	{ MODKEY|ShiftMask,             XK_p,      togglecanfocusfloating,   {0} },      /* Toggle focus for floating windows */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -120,6 +120,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_0,                      9)
 	{ MODKEY,                       XK_Next,   shiftview,      { .i = +1 } },        /* Switch to next tag */
 	{ MODKEY,                       XK_Prior,  shiftview,      { .i = -1 } },        /* Switch to previous tag */
 	{ MODKEY|ALTKEY,                XK_q,      quit,           {0} },                /* Kill Dwm */
